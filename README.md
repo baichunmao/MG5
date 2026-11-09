@@ -1,6 +1,7 @@
 # MG5
 ## Devlog
-Put your Devlog here.
+1. NavMesh is better when you need automatic pathfinding, obstacle avoidance, and navigation around complex static environments without writing lots of movement logic yourself. It is great for NPCs, enemies, or agents that need to find paths to destinations. Physics-based movement is better when you want realistic collisions, momentum, bouncy motion, or responsive physical interactions, because physics drives the movement instead of precomputed navigation paths. Example for NavMesh: Stardew Valley. Villagers automatically walk around the farm, avoid trees and buildings, and find their way to destinations; NavMesh handles this pathfinding cleanly.Example that does not fit NavMesh: Rocket League. Cars rely entirely on physics, velocity, bounces, and collision responses. NavMesh pathfinding would not work for this fast, physically driven movement.
+2. Inside the for loop, the code iterates over every bird stored in the _birds array one by one. Vector3.Distance calculates the straight-line distance between each bird’s position and the player’s position. The if statement checks whether this distance is smaller than a threshold value. Only birds that are close enough to the player (within that set distance) will trigger the “run away” behavior. Birds far away from the player will ignore this logic and do not flee.
 
 ## Open-Source Assets
 - [Quirky animal 3D models](https://assetstore.unity.com/packages/3d/characters/animals/quirky-series-free-animals-pack-178235)
